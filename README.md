@@ -11,11 +11,11 @@ The Custom Keyboard is an Android application that provides a customizable keybo
 - Smooth and responsive typing experience.
 
 ## Screenshots
-
-![Screenshot 1](demo/one.jpg)<br/>
-![Screenshot 1](demo/two.jpg)<br/>
-![Screenshot 1](demo/three.jpg)
-
+<p>
+<img src="demo/one.jpg" alt="Screenshot 1" height="300">
+<img src="demo/two.jpg" alt="Screenshot 1" height="300">
+<img src="demo/three.jpg" alt="Screenshot 1" height="300">
+</p>
 
 
 ## Getting Started
@@ -56,7 +56,4 @@ The Custom Keyboard provides various customization options to tailor the keyboar
 
 Feel free to modify these files to change key labels, positions, colors, sizes, and other properties to match your desired keyboard design.
 
-### License
-
-The Custom Keyboard project is licensed under the MIT License. You are free to modify and distribute the code for personal and commercial use.
 
