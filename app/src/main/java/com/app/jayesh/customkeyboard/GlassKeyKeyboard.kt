@@ -10,25 +10,36 @@ import android.media.AudioManager;
 import android.os.IBinder;
 import android.util.Log
 import android.view.KeyEvent;
+import android.view.KeyboardShortcutGroup
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 
 
-class GlassKeyKeyboard :  InputMethodService(), KeyboardView.OnKeyboardActionListener {
+class GlassKeyKeyboard : InputMethodService(), KeyboardView.OnKeyboardActionListener {
     private lateinit var kv: KeyboardView
     private lateinit var keyboard: Keyboard
 
     private var isCaps = false
+    private var isSpecial = false;
 
     override fun onCreateInputView(): View {
         kv = layoutInflater.inflate(R.layout.keyboard, null) as KeyboardView
         keyboard = Keyboard(this, R.xml.qwerty)
         kv.keyboard = keyboard
         kv.setOnKeyboardActionListener(this)
+        val qk = keyboard.keys.find {
+            it.codes.contains(44)
+        }
+        qk?.label = "?123"
+        val qm = keyboard.keys.find {
+            it.codes.contains(63)
+        }
+        qm?.label = "?"
         return kv
     }
 
-    override fun onPress(i: Int) {}
+    override fun onPress(primaryCode: Int) {
+    }
 
     override fun onRelease(i: Int) {}
 
@@ -42,7 +53,25 @@ class GlassKeyKeyboard :  InputMethodService(), KeyboardView.OnKeyboardActionLis
                 keyboard.isShifted = isCaps
                 kv.invalidateAllKeys()
             }
-            Keyboard.KEYCODE_DONE -> ic.sendKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER))
+
+            44 -> {
+                if (!isSpecial) {
+                    kv.keyboard = Keyboard(this, R.xml.qwerty)
+                    isSpecial = !isSpecial
+                } else {
+                    kv.keyboard = Keyboard(this, R.xml.keyboard_special_chars)
+                    isSpecial = !isSpecial
+                }
+
+            }
+
+            Keyboard.KEYCODE_DONE -> ic.sendKeyEvent(
+                KeyEvent(
+                    KeyEvent.ACTION_DOWN,
+                    KeyEvent.KEYCODE_ENTER
+                )
+            )
+
             else -> {
                 var code = i.toChar()
                 if (Character.isLetter(code) && isCaps) {

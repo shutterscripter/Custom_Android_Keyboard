@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
-    android:background="@color/purple_200"
     android:keyBackground="@drawable/key_background"
+    android:paddingBottom="10dp"
+    android:paddingTop="5dp"
     android:keyPreviewLayout="@layout/key_preview"
     android:keyTextColor="@color/white">
 

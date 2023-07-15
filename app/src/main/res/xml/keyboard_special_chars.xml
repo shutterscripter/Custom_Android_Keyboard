@@ -4,7 +4,6 @@
     android:keyWidth="8%p"
     android:keyHeight="40dp"
     android:verticalGap="5dp">
-
     <Row>
         <Key
             android:codes="49"
@@ -41,102 +40,67 @@
 
 
     </Row>
-
     <Row>
         <Key
-            android:codes="113"
+            android:codes="33"
             android:keyEdgeFlags="left"
-            android:keyLabel="q" />
+            android:keyLabel="!" />
         <Key
-            android:codes="119"
-            android:keyLabel="w" />
+            android:codes="64"
+            android:keyLabel="\u0040" />
         <Key
-            android:codes="101"
-            android:keyLabel="e" />
+            android:codes="35"
+            android:keyLabel="#" />
         <Key
-            android:codes="114"
-            android:keyLabel="r" />
+            android:codes="36"
+            android:keyLabel="$" />
         <Key
-            android:codes="116"
-            android:keyLabel="t" />
+            android:codes="37"
+            android:keyLabel="%" />
         <Key
-            android:codes="121"
-            android:keyLabel="y" />
+            android:codes="94"
+            android:keyLabel="^" />
         <Key
-            android:codes="117"
-            android:keyLabel="u" />
+            android:codes="38"
+            android:keyLabel= "&amp;" />
         <Key
-            android:codes="105"
-            android:keyLabel="i" />
+            android:codes="42"
+            android:keyLabel="*" />
         <Key
-            android:codes="111"
-            android:keyLabel="o" />
+            android:codes="40"
+            android:keyLabel="(" />
         <Key
-            android:codes="112"
+            android:codes="41"
             android:keyEdgeFlags="right"
-            android:keyLabel="p" />
+            android:keyLabel=")" />
     </Row>
 
     <Row>
         <Key
-            android:codes="97"
+            android:codes="63"
             android:keyEdgeFlags="left"
-            android:keyLabel="a" />
+            android:keyLabel="\u003F" />
         <Key
-            android:codes="115"
-            android:keyLabel="s" />
+            android:codes="58"
+            android:keyLabel=":" />
         <Key
-            android:codes="100"
-            android:keyLabel="d" />
+            android:codes="59"
+            android:keyLabel=";" />
         <Key
-            android:codes="102"
-            android:keyLabel="f" />
+            android:codes="45"
+            android:keyLabel="-" />
         <Key
-            android:codes="103"
-            android:keyLabel="g" />
+            android:codes="43"
+            android:keyLabel="+" />
         <Key
-            android:codes="104"
-            android:keyLabel="h" />
+            android:codes="47"
+            android:keyLabel="/" />
         <Key
-            android:codes="106"
-            android:keyLabel="j" />
+            android:codes="92"
+            android:keyLabel="\\" />
         <Key
-            android:codes="107"
-            android:keyLabel="k" />
-        <Key
-            android:codes="108"
-            android:keyEdgeFlags="right"
-            android:keyLabel="l" />
-    </Row>
-
-    <Row>
-        <Key
-            android:codes="-1"
-            android:keyWidth="15%p"
-            android:keyEdgeFlags="left"
-
-            android:keyIcon="@drawable/up_arrow" />
-        <Key
-            android:codes="122"
-            android:keyLabel="z" />
-        <Key
-            android:codes="120"
-            android:keyLabel="x" />
-        <Key
-            android:codes="99"
-            android:keyLabel="c" />
-        <Key
-            android:codes="118"
-            android:keyLabel="v" />
-        <Key
-            android:codes="98"
-            android:keyLabel="b" />
-        <Key
-            android:codes="110"
-            android:keyLabel="n" />
-        <Key
-            android:codes="109"
-            android:keyLabel="m" />
+            android:codes="124"
+            android:keyLabel="|" />
         <Key
             android:codes="-5"
             android:isRepeatable="true"
